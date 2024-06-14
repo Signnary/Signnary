@@ -1,17 +1,18 @@
 from flask import Flask, request, jsonify, render_template
-import joblib
+#import joblib
 import numpy as np
 from PIL import Image
-
+import tensorflow as tf
 app = Flask(__name__)
-from urllib.request import urlopen
-import joblib
+#from urllib.request import urlopen
+#import joblib
 
 # Load the model
 
-model = joblib.load(urlopen("https://storage.googleapis.com/signnary.appspot.com/model.pkl"))
-# model = joblib.load("https://storage.googleapis.com/signnary/Revision.pkl")
 
+#model = joblib.load(urlopen("https://storage.googleapis.com/signnary.appspot.com/model.pkl"))
+#model = joblib.load("D:\Bangkit\Caps\SignnaryID\Signnary\modelsignnary.pkl")
+model = tf.keras.models.load_model('D:\Bangkit\Caps\SignnaryID\Signnary\modelSignarry.keras', )
 # Mapping of class indices to letters
 class_to_letter = {
     0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E', 5: 'F', 6: 'G', 7: 'H', 8: 'I', 9: 'J',

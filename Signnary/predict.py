@@ -1,13 +1,15 @@
-import joblib
+#import joblib
 import numpy as np
 from PIL import Image
-from urllib.request import urlopen
-from sklearn.externals import joblib
+import tensorflow as tf
+
+#from urllib.request import urlopen
+#from sklearn.externals import joblib
 # Load the model
-model = joblib.load(urlopen("https://storage.googleapis.com/signnary.appspot.com/model.pkl"))
+#model = joblib.load(urlopen("https://storage.googleapis.com/signnary.appspot.com/model.pkl"))
 
-#model = joblib.load("https://storage.googleapis.com/signnary/Revision.pkl")
-
+#model = joblib.load("D:\Bangkit\Caps\SignnaryID\Signnary\modelsignnary.pkl")
+model = tf.keras.models.load_model('D:\Bangkit\Caps\SignnaryID\Signnary\modelSignarry.keras', )
 def make_prediction(image):
     """
     Make a prediction using the trained model
