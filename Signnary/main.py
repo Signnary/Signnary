@@ -9,7 +9,7 @@ import joblib
 
 # Load the model
 
-model = joblib.load(urlopen("https://storage.googleapis.com/signnary/Revision.pkl"))
+model = joblib.load(urlopen("https://storage.googleapis.com/signnary.appspot.com/model.pkl"))
 # model = joblib.load("https://storage.googleapis.com/signnary/Revision.pkl")
 
 # Mapping of class indices to letters

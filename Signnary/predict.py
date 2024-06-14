@@ -4,7 +4,7 @@ from PIL import Image
 from urllib.request import urlopen
 from sklearn.externals import joblib
 # Load the model
-model = joblib.load(urlopen("https://storage.googleapis.com/signnary/Revision.pkl"))
+model = joblib.load(urlopen("https://storage.googleapis.com/signnary.appspot.com/model.pkl"))
 
 #model = joblib.load("https://storage.googleapis.com/signnary/Revision.pkl")
 
