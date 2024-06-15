@@ -1,18 +1,15 @@
 from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS 
 #import joblib
 import numpy as np
 from PIL import Image
 import tensorflow as tf
 app = Flask(__name__)
-#from urllib.request import urlopen
-#import joblib
+CORS(app)
+
 
 # Load the model
 
-
-#model = joblib.load(urlopen("https://storage.googleapis.com/signnary.appspot.com/model.pkl"))
-#model = joblib.load("D:\Bangkit\Caps\SignnaryID\Signnary\modelsignnary.pkl")
-#model = tf.keras.models.load_model('D:\Bangkit\Caps\SignnaryID\Signnary\modelSignarry.keras', )
 model = tf.keras.models.load_model('modelSignarry.keras', )
 # Mapping of class indices to letters
 class_to_letter = {

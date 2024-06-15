@@ -3,13 +3,7 @@ import numpy as np
 from PIL import Image
 import tensorflow as tf
 
-#from urllib.request import urlopen
-#from sklearn.externals import joblib
-# Load the model
-#model = joblib.load(urlopen("https://storage.googleapis.com/signnary.appspot.com/model.pkl"))
 
-#model = joblib.load("D:\Bangkit\Caps\SignnaryID\Signnary\modelsignnary.pkl")
-#model = tf.keras.models.load_model('D:\Bangkit\Caps\SignnaryID\Signnary\modelSignarry.keras', )
 model = tf.keras.models.load_model('modelSignarry.keras', )
 def make_prediction(image):
     """
