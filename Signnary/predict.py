@@ -9,7 +9,8 @@ import tensorflow as tf
 #model = joblib.load(urlopen("https://storage.googleapis.com/signnary.appspot.com/model.pkl"))
 
 #model = joblib.load("D:\Bangkit\Caps\SignnaryID\Signnary\modelsignnary.pkl")
-model = tf.keras.models.load_model('D:\Bangkit\Caps\SignnaryID\Signnary\modelSignarry.keras', )
+#model = tf.keras.models.load_model('D:\Bangkit\Caps\SignnaryID\Signnary\modelSignarry.keras', )
+model = tf.keras.models.load_model('modelSignarry.keras', )
 def make_prediction(image):
     """
     Make a prediction using the trained model
